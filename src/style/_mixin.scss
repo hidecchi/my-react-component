@@ -1,0 +1,16 @@
+$breakpoints: (
+  "sp": "(max-width: 767px)",
+);
+
+@mixin mq($breakpoint: sp) {
+  @media #{map-get($breakpoints,$breakpoint)} {
+    @content;
+  }
+}
+
+/*ミックスインを定義*/
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

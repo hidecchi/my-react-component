@@ -1,0 +1,16 @@
+{
+  "editor.defaultFormatter": "biomejs.biome",
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode" // SCSS のみ Prettier を使用
+  },
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "quickfix.biome": "explicit",
+    "source.organizeImports.biome": "explicit"
+  },
+  "scss.lint.validProperties": ["user-drag", "-moz-user-select"],
+  "cSpell.words": ["clsx"],
+  "[postcss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}

@@ -1,0 +1,48 @@
+.component {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.input {
+  width: 2rem;
+  height: 2rem;
+  opacity: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.alternativeInput {
+  width: 2rem;
+  height: 2rem;
+  margin-left: -2rem;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &::after {
+    content: "";
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    background-color: #002c8c;
+    opacity: 0;
+  }
+}
+
+.input:checked + .alternativeInput::after {
+  opacity: 1;
+}
+
+.input:focus + .alternativeInput {
+  border-color: var(--font-color-blue);
+  box-shadow: var(--input-shadow);
+}
+
+.labelText {
+  margin-left: 0.4rem;
+  font-size: 1.3rem;
+  white-space: nowrap;
+}

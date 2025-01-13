@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  border-bottom: 0.1rem solid #ccc;
+}
+
+.column {
+  width: fit-content;
+}
+
+.button {
+  width: 19rem;
+  height: 8.4rem;
+  padding: 0.5rem 1.5rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.active {
+  color: blue;
+  pointer-events: none;
+  border-bottom: 1px solid blue;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0.3rem;
+    background-color: var(--primary-color);
+  }
+}
+
+.tabBody {
+  padding: 4rem 2.4rem;
+  background-color: #eee;
+}
